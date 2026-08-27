@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://pembelianmobil.com";
   const routes = [
     "",
+    "/links",
     "/cek-harga",
     "/cara-jual",
     "/mobil-yang-kami-beli",
@@ -16,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === "" ? "daily" : "weekly",
-    priority: route === "" ? 1.0 : 0.8,
+    changeFrequency: route === "" || route === "/links" ? "daily" : "weekly",
+    priority: route === "" ? 1.0 : route === "/links" ? 0.9 : 0.8,
   }));
 }

@@ -1,6 +1,8 @@
 export const DEFAULT_PHONE = "6287752581074";
 export const MAPS_URL = "https://maps.app.goo.gl/tyxiNiTooNbJrqJv5";
 export const BUSINESS_NAME = "Naufal Gallery Motor";
+export const INSTAGRAM_URL = "https://www.instagram.com/naufalgallerymotor?igsi=MTRkb2tuMDNrbnpydQ==";
+export const FACEBOOK_URL = "https://www.facebook.com/share/1bvxdbmQok/";
 
 export interface CarInquiryData {
   name?: string;

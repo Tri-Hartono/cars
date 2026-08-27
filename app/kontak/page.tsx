@@ -1,11 +1,20 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import { MessageCircle, Phone, Clock, MapPin, ShieldCheck, ArrowRight, ExternalLink } from "lucide-react";
-import { getWhatsAppUrl, DEFAULT_PHONE, MAPS_URL, BUSINESS_NAME } from "@/lib/whatsapp";
+import { MessageCircle, Phone, Clock, MapPin, ShieldCheck, ArrowRight, ExternalLink, Link2 } from "lucide-react";
+import { InstagramIcon, FacebookIcon } from "@/components/SocialIcons";
+import {
+  getWhatsAppUrl,
+  DEFAULT_PHONE,
+  MAPS_URL,
+  BUSINESS_NAME,
+  INSTAGRAM_URL,
+  FACEBOOK_URL,
+} from "@/lib/whatsapp";
 
 export default function KontakPage() {
   const waUrl = getWhatsAppUrl();
@@ -44,7 +53,7 @@ export default function KontakPage() {
               Kontak &amp; Layanan Pelanggan {BUSINESS_NAME}
             </h1>
             <p className="text-sm text-neutral-600 max-w-lg mx-auto">
-              Hubungi kami langsung via WhatsApp untuk pertanyaan, cek estimasi harga, atau kunjungi lokasi showroom kami di Google Maps.
+              Hubungi kami langsung via WhatsApp untuk pertanyaan, cek estimasi harga, atau ikuti sosial media resmi kami.
             </p>
           </motion.div>
 
@@ -143,6 +152,70 @@ export default function KontakPage() {
               </p>
             </motion.div>
           </div>
+
+          {/* Social Media Connect Box */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="bg-[#FAFAF8] border border-neutral-200 rounded-3xl p-6 sm:p-8 space-y-4"
+          >
+            <div>
+              <h2 className="text-lg font-bold text-neutral-900">Sosial Media Resmi {BUSINESS_NAME}</h2>
+              <p className="text-xs text-neutral-500 mt-0.5">
+                Ikuti akun sosial media resmi kami untuk update dokumentasi transaksi dan stok kendaraan:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+              {/* Instagram */}
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-neutral-200 hover:border-pink-300 hover:shadow-xs transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                  <InstagramIcon className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-neutral-900">Instagram</div>
+                  <div className="text-[11px] text-neutral-500">@naufalgallerymotor</div>
+                </div>
+              </a>
+
+              {/* Facebook */}
+              <a
+                href={FACEBOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-neutral-200 hover:border-blue-300 hover:shadow-xs transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <FacebookIcon className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-neutral-900">Facebook Page</div>
+                  <div className="text-[11px] text-neutral-500">Naufal Gallery Motor</div>
+                </div>
+              </a>
+
+              {/* Linktree Bio */}
+              <Link
+                href="/links"
+                className="flex items-center gap-3 p-4 bg-white rounded-2xl border border-neutral-200 hover:border-emerald-300 hover:shadow-xs transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                  <Link2 className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-neutral-900">Bio Links</div>
+                  <div className="text-[11px] text-neutral-500">Halaman Semua Link</div>
+                </div>
+              </Link>
+            </div>
+          </motion.div>
 
           {/* Service Area Coverage */}
           <motion.div
