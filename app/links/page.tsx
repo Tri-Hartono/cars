@@ -354,10 +354,10 @@ export default function LinksPage() {
         >
           <div className="flex items-center justify-center gap-1.5 font-bold text-neutral-900">
             <Clock className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Jam Layanan: Senin - Minggu (08.00 - 21.00 WIB)</span>
+            <span>Layanan 24 Jam Nonstop (24/7)</span>
           </div>
           <p className="text-[11px] text-neutral-500">
-            Wilayah Layanan: Jakarta, Bogor, Depok, Tangerang, Bekasi
+            Siap melayani konsultasi &amp; Home Inspection se-Jabodetabek setiap saat
           </p>
         </motion.div>
 

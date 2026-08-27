@@ -192,8 +192,8 @@ export default function Footer() {
               <div className="flex items-start gap-2">
                 <Clock className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-semibold text-neutral-900">Jam Operasional:</span>
-                  <p className="text-neutral-600 mt-0.5">Senin - Minggu: 08.00 - 21.00 WIB</p>
+                  <span className="font-semibold text-neutral-900">Layanan &amp; Operasional:</span>
+                  <p className="text-neutral-600 mt-0.5">Buka 24 Jam Nonstop (24/7)</p>
                 </div>
               </div>
 

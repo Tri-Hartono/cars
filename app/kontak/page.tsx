@@ -128,7 +128,7 @@ export default function KontakPage() {
               </div>
             </motion.div>
 
-            {/* Card 3: Jam Operasional */}
+            {/* Card 3: Layanan 24/7 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -138,17 +138,17 @@ export default function KontakPage() {
               className="bg-white border border-neutral-200 rounded-3xl p-6 space-y-3 shadow-xs flex flex-col justify-between"
             >
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-neutral-100 text-neutral-800 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-neutral-900">Jam Operasional</h3>
-                  <p className="text-xs text-neutral-500 mt-0.5">Melayani konsultasi &amp; inspeksi setiap hari</p>
-                  <p className="text-sm font-bold text-neutral-900 mt-2">Senin – Minggu: 08:00 – 21:00 WIB</p>
+                  <h3 className="text-base font-bold text-neutral-900">Layanan 24/7</h3>
+                  <p className="text-xs text-neutral-500 mt-0.5">Melayani konsultasi &amp; inspeksi kapan saja</p>
+                  <p className="text-sm font-bold text-neutral-900 mt-2">Buka 24 Jam Setiap Hari (24/7)</p>
                 </div>
               </div>
               <p className="text-[11px] text-neutral-500 pt-2">
-                *Inspeksi ke rumah tetap beroperasi saat hari libur &amp; akhir pekan.
+                *Siap melayani konsultasi WhatsApp &amp; Home Inspection kapan saja.
               </p>
             </motion.div>
           </div>
