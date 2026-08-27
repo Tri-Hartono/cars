@@ -63,13 +63,13 @@ export default function Navbar() {
         className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-neutral-200"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-20 sm:h-22">
             {/* Brand Logo & Name */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-3 group py-2">
               <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="relative h-11 w-36 sm:h-12 sm:w-44"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="relative h-12 w-44 sm:h-14 sm:w-56"
               >
                 <Image
                   src="/image/logo.png"
@@ -77,7 +77,7 @@ export default function Navbar() {
                   fill
                   priority
                   className="object-contain object-left"
-                  sizes="(max-width: 768px) 150px, 200px"
+                  sizes="(max-width: 768px) 180px, 240px"
                 />
               </motion.div>
             </Link>
