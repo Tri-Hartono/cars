@@ -33,7 +33,7 @@ const BANNER_SLIDES: BannerSlide[] = [
     tag: "PROMO TERBARU ⚡",
     tagBg: "bg-emerald-600 text-white",
     title: `Jual Mobil Bekas Cepat di ${BUSINESS_NAME}, Dana Cair 15 Menit!`,
-    subtitle: "Dapatkan penawaran harga pasar terbaik tanpa potongan perantara. Transaksi aman, resmi, dan langsung transfer lunas.",
+    subtitle: "Dapatkan penawaran harga pasar terbaik untuk mobil keluarga, MPV, dan City Car tanpa potongan calo.",
     badge: "Garansi Pembayaran Instan",
     image: "/images/cars/hero-car-main.webp",
     cta: "Klaim Penawaran via WA",
@@ -43,19 +43,19 @@ const BANNER_SLIDES: BannerSlide[] = [
     tag: "LAYANAN EKSKLUSIF 🏠",
     tagBg: "bg-neutral-900 text-white",
     title: "Gratis Home Inspection ke Rumah Anda",
-    subtitle: `Tim inspektor profesional ${BUSINESS_NAME} memeriksa 150 titik kendaraan langsung di lokasi Anda se-Jabodetabek tanpa biaya transport.`,
+    subtitle: `Tim inspektor ${BUSINESS_NAME} memeriksa 150 titik kendaraan langsung di rumah Anda se-Jabodetabek tanpa biaya transport.`,
     badge: "Bebas Biaya Transportasi",
-    image: "/images/cars/suv.webp",
+    image: "/images/cars/mpv.webp",
     cta: "Jadwalkan Inspeksi Gratis",
   },
   {
     id: 3,
-    tag: "SEMUA MEREK & TAHUN 🚗",
+    tag: "SEMUA MEREK & LCGC 🚗",
     tagBg: "bg-emerald-700 text-white",
-    title: "Terima Segala Kondisi & Over Kredit Leasing",
-    subtitle: "Melayani mobil MPV, SUV, City Car, Sedan hingga mobil yang masih dalam masa cicilan leasing dengan proses resmi.",
+    title: "Terima Avanza, Brio, Calya, Sigra & Over Kredit",
+    subtitle: "Melayani segala tipe mobil keluarga, hatchback, LCGC, hingga mobil yang masih dalam masa cicilan leasing.",
     badge: "Bantuan Berkas Sah & Tuntas",
-    image: "/images/cars/mpv.webp",
+    image: "/images/cars/citycar.webp",
     cta: "Konsultasi Mobil Saya",
   },
   {
@@ -63,9 +63,9 @@ const BANNER_SLIDES: BannerSlide[] = [
     tag: "LOKASI SHOWROOM 📍",
     tagBg: "bg-neutral-800 text-white",
     title: `Kunjungi Showroom ${BUSINESS_NAME}`,
-    subtitle: "Partner jual beli mobil terpercaya dengan showroom resmi di Jabodetabek. Cek lokasi kami di Google Maps.",
+    subtitle: "Partner jual beli mobil keluarga terpercaya dengan showroom resmi di Jabodetabek. Cek lokasi di Google Maps.",
     badge: "Lokasi Strategis & Nyaman",
-    image: "/images/cars/sedan.webp",
+    image: "/images/cars/suv.webp",
     cta: "Buka Google Maps",
   },
 ];
@@ -122,11 +122,11 @@ export default function FullWidthHero() {
   return (
     <section className="relative bg-white border-b border-neutral-200/80">
       
-      {/* 1. Full-Width Hero Rotating Promo Banner */}
+      {/* 1. Full-Width Hero Rotating Promo Banner - Mobile Friendly Height & Font */}
       <div
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
-        className="relative w-full h-[380px] sm:h-[440px] md:h-[500px] lg:h-[540px] bg-neutral-950 overflow-hidden group"
+        className="relative w-full h-[320px] sm:h-[420px] md:h-[480px] lg:h-[520px] bg-neutral-950 overflow-hidden group"
       >
         <AnimatePresence mode="wait">
           <motion.div
@@ -153,7 +153,7 @@ export default function FullWidthHero() {
         <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/90 via-neutral-950/40 to-transparent" />
 
         {/* Slide Content Box */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-between py-8 sm:py-12 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-between py-5 sm:py-10 md:py-12 relative z-10">
           
           {/* Top Tag */}
           <motion.div
@@ -161,9 +161,9 @@ export default function FullWidthHero() {
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4 }}
-            className="flex items-center gap-3"
+            className="flex items-center gap-2 sm:gap-3"
           >
-            <span className={`text-[11px] sm:text-xs font-extrabold px-3.5 py-1 rounded-full uppercase tracking-wider ${active.tagBg}`}>
+            <span className={`text-[10px] sm:text-xs font-extrabold px-2.5 py-0.5 sm:px-3.5 sm:py-1 rounded-full uppercase tracking-wider ${active.tagBg}`}>
               {active.tag}
             </span>
             <span className="hidden sm:inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/20">
@@ -172,22 +172,22 @@ export default function FullWidthHero() {
             </span>
           </motion.div>
 
-          {/* Center Main Text */}
+          {/* Center Main Text - Responsive Font for Mobile */}
           <motion.div
             key={`content-${current}`}
             initial={{ y: 15, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="space-y-3 max-w-2xl"
+            className="space-y-2 sm:space-y-3 max-w-2xl"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight drop-shadow-md">
+            <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-white leading-snug sm:leading-tight tracking-tight drop-shadow-md">
               {active.title}
             </h1>
-            <p className="text-xs sm:text-sm md:text-base text-neutral-200 leading-relaxed drop-shadow-xs max-w-xl">
+            <p className="text-[11px] sm:text-sm md:text-base text-neutral-200 leading-relaxed drop-shadow-xs max-w-xl line-clamp-2 sm:line-clamp-none">
               {active.subtitle}
             </p>
 
-            <div className="pt-2 flex flex-wrap items-center gap-3">
+            <div className="pt-1 sm:pt-2 flex flex-wrap items-center gap-2 sm:gap-3">
               {active.id === 4 ? (
                 <motion.a
                   whileHover={{ scale: 1.03 }}
@@ -195,11 +195,11 @@ export default function FullWidthHero() {
                   href={MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all group/btn"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all group/btn"
                 >
-                  <MapPin className="w-4 h-4" />
+                  <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   <span>Buka di Google Maps</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
+                  <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
                 </motion.a>
               ) : (
                 <motion.a
@@ -208,11 +208,11 @@ export default function FullWidthHero() {
                   href={defaultWaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all group/btn"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all group/btn"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   <span>{active.cta}</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
+                  <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
                 </motion.a>
               )}
 
@@ -222,7 +222,7 @@ export default function FullWidthHero() {
                 href={MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 bg-white/20 hover:bg-white/30 text-white backdrop-blur-md px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all border border-white/20"
+                className="hidden sm:inline-flex items-center gap-1.5 bg-white/20 hover:bg-white/30 text-white backdrop-blur-md px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all border border-white/20"
               >
                 <MapPin className="w-3.5 h-3.5" />
                 <span>Petunjuk Arah Maps</span>
@@ -231,22 +231,22 @@ export default function FullWidthHero() {
           </motion.div>
 
           {/* Bottom Controls */}
-          <div className="flex items-center justify-between pt-2">
-            <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between pt-1 sm:pt-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               {BANNER_SLIDES.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrent(idx)}
                   type="button"
                   aria-label={`Slide ${idx + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    current === idx ? "w-8 bg-emerald-400" : "w-2 bg-white/40 hover:bg-white/70"
+                  className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
+                    current === idx ? "w-6 sm:w-8 bg-emerald-400" : "w-1.5 sm:w-2 bg-white/40 hover:bg-white/70"
                   }`}
                 />
               ))}
             </div>
 
-            <div className="text-[11px] text-neutral-400 font-medium">
+            <div className="text-[10px] sm:text-[11px] text-neutral-400 font-medium">
               {current + 1} / {BANNER_SLIDES.length}
             </div>
           </div>
@@ -258,18 +258,18 @@ export default function FullWidthHero() {
           onClick={prevSlide}
           type="button"
           aria-label="Previous slide"
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-neutral-900/60 hover:bg-neutral-900/90 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-neutral-900/60 hover:bg-neutral-900/90 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         >
-          <ChevronLeft className="w-6 h-6" />
+          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
 
         <button
           onClick={nextSlide}
           type="button"
           aria-label="Next slide"
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-neutral-900/60 hover:bg-neutral-900/90 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-neutral-900/60 hover:bg-neutral-900/90 text-white flex items-center justify-center backdrop-blur-xs border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         >
-          <ChevronRight className="w-6 h-6" />
+          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
       </div>
 
@@ -279,26 +279,26 @@ export default function FullWidthHero() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-7 sm:-mt-8 relative z-20 mb-6"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-5 sm:-mt-8 relative z-20 mb-6"
       >
-        <div className="bg-white rounded-3xl border border-neutral-200 p-5 sm:p-6 shadow-xl shadow-neutral-200/60">
+        <div className="bg-white rounded-2xl sm:rounded-3xl border border-neutral-200 p-4 sm:p-6 shadow-xl shadow-neutral-200/60">
           
-          <div className="flex items-center justify-between mb-3 border-b border-neutral-100 pb-2.5">
+          <div className="flex items-center justify-between mb-3 border-b border-neutral-100 pb-2">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping" />
+              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-ping" />
               <h2 className="text-xs sm:text-sm font-bold text-neutral-900 uppercase tracking-wider">
-                Cek Perkiraan Harga Mobil Instan di {BUSINESS_NAME}
+                Cek Perkiraan Harga Mobil Instan
               </h2>
             </div>
-            <span className="text-[11px] text-neutral-500 hidden sm:inline">
+            <span className="text-[10px] sm:text-[11px] text-neutral-500 hidden sm:inline">
               ⚡ Hasil langsung terhubung ke WhatsApp (+62 877-5258-1074)
             </span>
           </div>
 
-          <form onSubmit={handleQuickSubmit} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 items-end">
+          <form onSubmit={handleQuickSubmit} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-2.5 sm:gap-3 items-end">
             {/* Merek */}
             <div>
-              <label className="block text-[11px] font-bold text-neutral-700 mb-1">
+              <label className="block text-[10px] sm:text-[11px] font-bold text-neutral-700 mb-0.5 sm:mb-1">
                 Merek Mobil
               </label>
               <select
@@ -322,7 +322,7 @@ export default function FullWidthHero() {
 
             {/* Model */}
             <div>
-              <label className="block text-[11px] font-bold text-neutral-700 mb-1">
+              <label className="block text-[10px] sm:text-[11px] font-bold text-neutral-700 mb-0.5 sm:mb-1">
                 Model / Tipe
               </label>
               {availableModels.length > 0 ? (
@@ -354,12 +354,12 @@ export default function FullWidthHero() {
 
             {/* Tahun */}
             <div>
-              <label className="block text-[11px] font-bold text-neutral-700 mb-1">
+              <label className="block text-[10px] sm:text-[11px] font-bold text-neutral-700 mb-0.5 sm:mb-1">
                 Tahun
               </label>
               <input
                 type="number"
-                placeholder="Contoh: 2020"
+                placeholder="Contoh: 2019"
                 min="2000"
                 max={new Date().getFullYear()}
                 value={year}
@@ -370,7 +370,7 @@ export default function FullWidthHero() {
 
             {/* No WhatsApp */}
             <div>
-              <label className="block text-[11px] font-bold text-neutral-700 mb-1">
+              <label className="block text-[10px] sm:text-[11px] font-bold text-neutral-700 mb-0.5 sm:mb-1">
                 Nomor WhatsApp
               </label>
               <input
