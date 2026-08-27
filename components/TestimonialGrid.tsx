@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Star, MessageCircle } from "lucide-react";
-import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { getWhatsAppUrl, BUSINESS_NAME } from "@/lib/whatsapp";
 
 interface TestimonialItem {
   id: number;
@@ -23,7 +23,7 @@ const ROW_1: TestimonialItem[] = [
     rating: 5.0,
     car: "Honda CR-V Turbo",
     comment:
-      "Proses transaksinya sat set tanpa nunggu lama, janjian dengan surveyor AutoValu tepat waktu, dan yang paling penting harganya best deal!",
+      `Proses transaksinya sat set tanpa nunggu lama, janjian dengan surveyor ${BUSINESS_NAME} tepat waktu, dan yang paling penting harganya best deal!`,
     avatar: "/images/avatars/avatar1.webp",
   },
   {
@@ -43,7 +43,7 @@ const ROW_1: TestimonialItem[] = [
     rating: 5.0,
     car: "Mitsubishi Xpander",
     comment:
-      "Terima kasih AutoValu.id proses cepat dan harga kompetitif. Sukses terus ya.",
+      `Terima kasih ${BUSINESS_NAME} proses cepat dan harga kompetitif. Sukses terus ya.`,
     avatar: "/images/avatars/avatar3.webp",
   },
   {
@@ -53,7 +53,7 @@ const ROW_1: TestimonialItem[] = [
     rating: 5.0,
     car: "Honda Brio RS",
     comment:
-      "Terima kasih kepada tim AutoValu yang telah membantu proses jual mobil saya dengan sangat cepat dan mudah. Semuanya berjalan lancar!",
+      `Terima kasih kepada tim ${BUSINESS_NAME} yang telah membantu proses jual mobil saya dengan sangat cepat dan mudah. Semuanya berjalan lancar!`,
     avatar: "/images/avatars/avatar4.webp",
   },
   {
@@ -73,7 +73,7 @@ const ROW_1: TestimonialItem[] = [
     rating: 5.0,
     car: "Daihatsu Terios",
     comment:
-      "Awalnya ragu jual online, tapi ternyata di AutoValu aman banget. SPJB resmi disiapkan dan uang ditransfer lunas sebelum mobil dibawa.",
+      `Awalnya ragu jual online, tapi ternyata di ${BUSINESS_NAME} aman banget. SPJB resmi disiapkan dan uang ditransfer lunas sebelum mobil dibawa.`,
     avatar: "/images/avatars/avatar2.webp",
   },
   {
@@ -106,7 +106,7 @@ const ROW_2: TestimonialItem[] = [
     rating: 5.0,
     car: "Hyundai Creta Prime",
     comment:
-      "Gak nyangka jual mobil bisa secepat kilat! Tanpa ribet urus berkas, penawaran harga terbaik. Sukses selalu AutoValu.id.",
+      `Gak nyangka jual mobil bisa secepat kilat! Tanpa ribet urus berkas, penawaran harga terbaik. Sukses selalu ${BUSINESS_NAME}.`,
     avatar: "/images/avatars/avatar1.webp",
   },
   {
@@ -116,7 +116,7 @@ const ROW_2: TestimonialItem[] = [
     rating: 5.0,
     car: "Honda Civic RS",
     comment:
-      "AutoValu terbaik banget dalam proses jual mobil, sangat cepat dan mudah. Penawaran harga yang di berikan juga best deal banget. Sukses terus...",
+      `${BUSINESS_NAME} terbaik banget dalam proses jual mobil, sangat cepat dan mudah. Penawaran harga yang di berikan juga best deal banget. Sukses terus...`,
     avatar: "/images/avatars/avatar2.webp",
   },
   {
@@ -126,7 +126,7 @@ const ROW_2: TestimonialItem[] = [
     rating: 5.0,
     car: "Toyota Raize Turbo",
     comment:
-      "“Pengalaman jual mobil di AutoValu.id sangat memuaskan! Prosesnya cepat, mudah, dan bayarnya gak lama. Saya sangat terkesan dengan tim mereka...”",
+      `“Pengalaman jual mobil di ${BUSINESS_NAME} sangat memuaskan! Prosesnya cepat, mudah, dan bayarnya gak lama. Saya sangat terkesan dengan tim mereka...”`,
     avatar: "/images/avatars/avatar3.webp",
   },
   {
@@ -136,7 +136,7 @@ const ROW_2: TestimonialItem[] = [
     rating: 5.0,
     car: "Mazda CX-5",
     comment:
-      "Proses cepat sesuai taglinenya, keren AutoValu! Uang langsung cair tanpa potongan tersembunyi.",
+      `Proses cepat sesuai taglinenya, keren ${BUSINESS_NAME}! Uang langsung cair tanpa potongan tersembunyi.`,
     avatar: "/images/avatars/avatar4.webp",
   },
   {
@@ -146,7 +146,7 @@ const ROW_2: TestimonialItem[] = [
     rating: 5.0,
     car: "Wuling Almaz RS",
     comment:
-      "Mobil masih sisa cicilan leasing 4 bulan dibantu proses over kredit pelunasan sampai tuntas oleh AutoValu. Sangat transparan!",
+      `Mobil masih sisa cicilan leasing 4 bulan dibantu proses over kredit pelunasan sampai tuntas oleh ${BUSINESS_NAME}. Sangat transparan!`,
     avatar: "/images/avatars/avatar1.webp",
   },
   {
@@ -176,7 +176,7 @@ const ROW_2: TestimonialItem[] = [
     rating: 5.0,
     car: "Toyota Calya G",
     comment:
-      "Jual mobil di AutoValu praktis banget. Hari ini inspeksi, hari ini juga uang masuk rekening.",
+      `Jual mobil di ${BUSINESS_NAME} praktis banget. Hari ini inspeksi, hari ini juga uang masuk rekening.`,
     avatar: "/images/avatars/avatar4.webp",
   },
 ];
@@ -209,7 +209,7 @@ export default function TestimonialGrid() {
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
             Pengalaman mereka di{" "}
-            <span className="text-emerald-700">AutoValu!</span>
+            <span className="text-emerald-700">{BUSINESS_NAME}!</span>
           </h2>
           <p className="text-xs sm:text-sm text-neutral-600 max-w-lg mx-auto">
             Cerita nyata dari ratusan pemilik kendaraan yang berhasil menjual mobilnya dengan cepat, aman, dan tanpa ribet.
@@ -331,7 +331,7 @@ export default function TestimonialGrid() {
             className="inline-flex items-center gap-2 bg-[#111111] hover:bg-[#16A34A] text-white px-6 py-2.5 rounded-xl text-xs font-bold shadow-xs transition-all cursor-pointer"
           >
             <MessageCircle className="w-4 h-4 text-emerald-400" />
-            <span>Gabung dengan Ratusan Penjual Puas di AutoValu</span>
+            <span>Gabung dengan Ratusan Penjual Puas di {BUSINESS_NAME}</span>
           </motion.a>
         </motion.div>
 

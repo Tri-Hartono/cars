@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { MessageCircle, CheckCircle2, Calculator, FileText, CalendarCheck, Search, Banknote } from "lucide-react";
-import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { getWhatsAppUrl, BUSINESS_NAME } from "@/lib/whatsapp";
 
 export default function CaraJualPage() {
   const waUrl = getWhatsAppUrl();
@@ -15,7 +15,7 @@ export default function CaraJualPage() {
       no: "01",
       icon: Calculator,
       title: "Cek Perkiraan Harga Mobil",
-      desc: "Kirimkan data merek, tipe, dan tahun mobil untuk mendapatkan estimasi nilai penawaran pasar secara transparan di AutoValu.",
+      desc: `Kirimkan data merek, tipe, dan tahun mobil untuk mendapatkan estimasi nilai penawaran pasar secara transparan di ${BUSINESS_NAME}.`,
     },
     {
       no: "02",
@@ -27,7 +27,7 @@ export default function CaraJualPage() {
       no: "03",
       icon: CalendarCheck,
       title: "Jadwalkan Inspeksi Gratis",
-      desc: "Tentukan hari dan lokasi pengecekan fisik. Teknisi AutoValu datang langsung ke rumah Anda tanpa biaya transport se-Jabodetabek.",
+      desc: `Tentukan hari dan lokasi pengecekan fisik. Teknisi ${BUSINESS_NAME} datang langsung ke rumah Anda tanpa biaya transport se-Jabodetabek.`,
     },
     {
       no: "04",
@@ -70,10 +70,10 @@ export default function CaraJualPage() {
             className="text-center space-y-2"
           >
             <span className="text-xs font-bold text-neutral-700 bg-neutral-100 px-3 py-1 rounded-full border border-neutral-200">
-              Panduan Penjualan AutoValu
+              Panduan Penjualan {BUSINESS_NAME}
             </span>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900">
-              Cara Jual Mobil ke AutoValu
+              Cara Jual Mobil ke {BUSINESS_NAME}
             </h1>
             <p className="text-sm text-neutral-600 max-w-lg mx-auto">
               5 tahapan praktis tanpa calo, tanpa perantara, dan tanpa proses berbelit-belit.
@@ -149,7 +149,7 @@ export default function CaraJualPage() {
           >
             <h3 className="text-xl font-bold">Siap Menjual Mobil Anda Sekarang?</h3>
             <p className="text-xs text-neutral-300 max-w-md mx-auto">
-              Hubungi WhatsApp AutoValu untuk jadwalkan inspeksi gratis ke rumah Anda hari ini.
+              Hubungi WhatsApp {BUSINESS_NAME} untuk jadwalkan inspeksi gratis ke rumah Anda hari ini.
             </p>
             <div className="pt-1">
               <motion.a
@@ -161,7 +161,7 @@ export default function CaraJualPage() {
                 className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white px-6 py-3 rounded-xl text-xs font-bold shadow-xs transition-all cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Konsultasi WhatsApp: +62 812-3420-8253</span>
+                <span>Konsultasi WhatsApp: +62 877-5258-1074</span>
               </motion.a>
             </div>
           </motion.div>

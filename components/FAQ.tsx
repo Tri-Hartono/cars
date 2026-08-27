@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, MessageCircle, HelpCircle } from "lucide-react";
-import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { ChevronDown, MessageCircle, HelpCircle, MapPin } from "lucide-react";
+import { getWhatsAppUrl, BUSINESS_NAME, MAPS_URL } from "@/lib/whatsapp";
 
 interface FaqItem {
   question: string;
@@ -12,9 +12,9 @@ interface FaqItem {
 
 const FAQS: FaqItem[] = [
   {
-    question: "Bagaimana cara menjual mobil di AutoValu?",
+    question: `Bagaimana cara menjual mobil di ${BUSINESS_NAME}?`,
     answer:
-      "Cukup isi data singkat mobil Anda di formulir website atau langsung chat WhatsApp resmi ke +62 812-3420-8253. Tim AutoValu akan memberikan estimasi awal dan menjadwalkan inspeksi gratis langsung ke lokasi rumah Anda.",
+      `Cukup isi data singkat mobil Anda di formulir website atau langsung chat WhatsApp resmi ke +62 877-5258-1074. Tim ${BUSINESS_NAME} akan memberikan estimasi awal dan menjadwalkan inspeksi gratis langsung ke lokasi rumah Anda.`,
   },
   {
     question: "Apakah inspeksi ke rumah (Home Visit) benar-benar gratis?",
@@ -27,9 +27,14 @@ const FAQS: FaqItem[] = [
       "Inspeksi 150 titik oleh teknisi profesional kami hanya memakan waktu sekitar 30 menit. Setelah Anda menyetujui penawaran harga final, seluruh dana langsung ditransfer lunas ke rekening Anda dalam waktu 15 menit di tempat.",
   },
   {
-    question: "Apakah AutoValu menerima mobil yang masih dalam status kredit/leasing?",
+    question: `Apakah ${BUSINESS_NAME} menerima mobil yang masih dalam status kredit/leasing?`,
     answer:
-      "Bisa. Tim AutoValu berpengalaman menangani proses over kredit dan pelunasan sisa hutang leasing (take over) secara resmi, aman, dan transparan.",
+      `Bisa. Tim ${BUSINESS_NAME} berpengalaman menangani proses over kredit dan pelunasan sisa hutang leasing (take over) secara resmi, aman, dan transparan.`,
+  },
+  {
+    question: `Dimana lokasi showroom ${BUSINESS_NAME}?`,
+    answer:
+      `Showroom kami berada di Jabodetabek dan dapat dikunjungi secara langsung. Anda dapat melihat peta dan petunjuk arah lengkap melalui link Google Maps: https://maps.app.goo.gl/tyxiNiTooNbJrqJv5`,
   },
   {
     question: "Dokumen apa saja yang perlu saya siapkan saat inspeksi?",
@@ -71,7 +76,7 @@ export default function FAQ() {
             Pertanyaan yang Sering Diajukan
           </h2>
           <p className="text-neutral-600 text-xs sm:text-sm max-w-md mx-auto">
-            Informasi lengkap seputar prosedur, keamanan transaksi, dan pencairan dana di AutoValu.
+            Informasi lengkap seputar prosedur, keamanan transaksi, lokasi showroom, dan pencairan dana di {BUSINESS_NAME}.
           </p>
         </motion.div>
 
@@ -134,9 +139,9 @@ export default function FAQ() {
             Masih punya pertanyaan lain seputar mobil Anda?
           </h3>
           <p className="text-xs text-neutral-500 max-w-md mx-auto">
-            Tim konsultan AutoValu siap menjawab pertanyaan Anda secara langsung melalui WhatsApp.
+            Tim konsultan {BUSINESS_NAME} siap menjawab pertanyaan Anda secara langsung melalui WhatsApp.
           </p>
-          <div className="pt-1">
+          <div className="pt-1 flex flex-wrap items-center justify-center gap-3">
             <motion.a
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -146,7 +151,18 @@ export default function FAQ() {
               className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow-xs transition-all cursor-pointer"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>Tanyakan via WhatsApp (+62 812-3420-8253)</span>
+              <span>Tanyakan via WhatsApp (+62 877-5258-1074)</span>
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-neutral-100 hover:bg-neutral-200 text-neutral-800 px-4 py-2.5 rounded-xl text-xs font-semibold border border-neutral-200 transition-all cursor-pointer"
+            >
+              <MapPin className="w-3.5 h-3.5 text-emerald-600" />
+              <span>Cek Lokasi Maps</span>
             </motion.a>
           </div>
         </motion.div>

@@ -11,8 +11,9 @@ import {
   Car,
   TrendingUp,
   Check,
+  MapPin,
 } from "lucide-react";
-import { getWhatsAppUrl, getWhatsAppUrlForCar } from "@/lib/whatsapp";
+import { getWhatsAppUrl, getWhatsAppUrlForCar, BUSINESS_NAME, MAPS_URL } from "@/lib/whatsapp";
 import { POPULAR_BRANDS } from "@/lib/carData";
 
 const FEATURED_CARS = [
@@ -69,35 +70,6 @@ export default function Hero() {
       {/* Background Subtle Grid Lines */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000006_1px,transparent_1px),linear-gradient(to_bottom,#00000006_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-      {/* Subtle Vector Wave Lines */}
-      <svg
-        className="absolute inset-0 w-full h-full pointer-events-none opacity-40 overflow-hidden"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 700"
-        fill="none"
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <linearGradient id="softSageHero" x1="0%" y1="0%" x2="35%" y2="35%">
-            <stop offset="0%" stopColor="#86efac" stopOpacity="0.4" />
-            <stop offset="80%" stopColor="#bbf7d0" stopOpacity="0.1" />
-            <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-          </linearGradient>
-        </defs>
-
-        <path
-          d="M0,0 L480,0 C520,0 550,30 550,70 L550,150 C550,200 500,230 450,230 L0,230 Z"
-          fill="url(#softSageHero)"
-        />
-
-        <g stroke="#16a34a" strokeOpacity="0.2" strokeWidth="0.75" fill="none">
-          <path d="M-50,400 C350,440 450,160 850,260 C1150,340 1300,180 1500,220" />
-          <path d="M-50,420 C350,450 460,180 860,270 C1160,345 1310,190 1500,230" />
-          <path d="M-50,440 C350,460 470,200 870,280 C1170,350 1320,200 1500,240" />
-          <path d="M-50,460 C350,470 480,220 880,290 C1180,355 1330,210 1500,250" />
-        </g>
-      </svg>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
         
         {/* Top: Simple Split */}
@@ -107,11 +79,11 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-800 text-xs font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-600" />
-              <span>Beli &amp; Jual Mobil Bekas Cepat</span>
+              <span>{BUSINESS_NAME} • Beli &amp; Jual Mobil Bekas Cepat</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-neutral-900 leading-tight">
-              Jual Mobil Bekas <br />
+              Jual Mobil Bekas di {BUSINESS_NAME} <br />
               <span className="text-emerald-700">Dana Cair 15 Menit</span>
             </h1>
 
@@ -141,7 +113,7 @@ export default function Hero() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-xs transition-all"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Chat WA: +62 812-3420-8253</span>
+                <span>Chat WA: +62 877-5258-1074</span>
               </a>
 
               <Link
@@ -258,7 +230,7 @@ export default function Hero() {
                   </label>
                   <input
                     type="tel"
-                    placeholder="0812xxxx"
+                    placeholder="0877xxxx"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full px-3 py-2 text-xs bg-neutral-50 border border-neutral-200 rounded-lg font-medium text-neutral-900 focus:outline-none focus:ring-1 focus:ring-emerald-600 focus:bg-white"

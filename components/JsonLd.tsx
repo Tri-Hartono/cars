@@ -6,17 +6,19 @@ export default function JsonLd() {
         "@type": "WebSite",
         "@id": "https://pembelianmobil.com/#website",
         "url": "https://pembelianmobil.com",
-        "name": "Beli Mobil Bekas Cepat & Terpercaya",
+        "name": "Naufal Gallery Motor - Beli & Jual Mobil Bekas Cepat",
         "description": "Layanan pembelian mobil bekas terpercaya dan proses cepat tanpa ribet.",
         "inLanguage": "id-ID"
       },
       {
         "@type": "AutoDealer",
         "@id": "https://pembelianmobil.com/#organization",
-        "name": "Pembelian Mobil Bekas",
+        "name": "Naufal Gallery Motor",
         "url": "https://pembelianmobil.com",
         "logo": "https://pembelianmobil.com/image/logo.png",
-        "description": "Tempat jual mobil bekas langsung dengan proses cepat, penawaran transparan, dan pembayaran instan.",
+        "telephone": "+6287752581074",
+        "hasMap": "https://maps.app.goo.gl/tyxiNiTooNbJrqJv5",
+        "description": "Tempat jual beli mobil bekas langsung dengan proses cepat, penawaran transparan, dan pembayaran instan.",
         "areaServed": [
           "Jakarta",
           "Bogor",
@@ -32,10 +34,10 @@ export default function JsonLd() {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Bagaimana cara menjual mobil ke kami?",
+            "name": "Bagaimana cara menjual mobil ke Naufal Gallery Motor?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Cukup hubungi melalui WhatsApp, kirimkan detail dan foto kendaraan untuk kami cek dan berikan penawaran."
+              "text": "Cukup hubungi melalui WhatsApp ke +62 877-5258-1074, kirimkan detail dan foto kendaraan untuk kami cek dan berikan penawaran."
             }
           },
           {

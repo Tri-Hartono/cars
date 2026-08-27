@@ -14,25 +14,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jual Mobil Bekas Cepat & Mudah | Pembelian Mobil Bekas Langsung",
+  title: "Naufal Gallery Motor | Jual Mobil Bekas Cepat & Terpercaya Jabodetabek",
   description:
-    "Mau jual mobil bekas tanpa ribet? Kami siap beli mobil Anda dengan penawaran harga terbaik, transparan, proses cepat, dan pembayaran instan di Jabodetabek via WhatsApp.",
+    "Jual mobil bekas tanpa ribet di Naufal Gallery Motor. Penawaran harga tertinggi, transparan, inspeksi gratis ke rumah se-Jabodetabek, dan dana cair 15 menit.",
   keywords: [
+    "Naufal Gallery Motor",
     "jual mobil",
     "jual mobil bekas",
     "jual mobil cepat",
     "tempat jual mobil",
     "pembeli mobil bekas",
     "jual mobil bekas jakarta",
+    "showroom mobil bekas jabodetabek",
     "jual mobil tanpa ribet",
   ],
-  authors: [{ name: "Pembelian Mobil Bekas" }],
+  authors: [{ name: "Naufal Gallery Motor" }],
   openGraph: {
-    title: "Jual Mobil Bekas Cepat & Mudah | Pembelian Mobil Bekas Langsung",
+    title: "Naufal Gallery Motor | Jual Mobil Bekas Cepat & Terpercaya",
     description:
-      "Kirim detail kendaraan via WhatsApp, dapatkan penawaran harga terbaik, dan terima pembayaran langsung di hari yang sama.",
+      "Kirim detail kendaraan via WhatsApp, dapatkan penawaran harga terbaik, dan terima pembayaran langsung di hari yang sama bersama Naufal Gallery Motor.",
     url: "https://pembelianmobil.com",
-    siteName: "Pembelian Mobil Bekas",
+    siteName: "Naufal Gallery Motor",
     locale: "id_ID",
     type: "website",
   },

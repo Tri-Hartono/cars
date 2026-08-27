@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, ArrowRight, Check, Zap } from "lucide-react";
-import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { MessageCircle, ArrowRight, Check, Zap, MapPin } from "lucide-react";
+import { getWhatsAppUrl, BUSINESS_NAME, MAPS_URL } from "@/lib/whatsapp";
 
 export default function FinalCTA() {
   const waUrl = getWhatsAppUrl();
@@ -38,15 +38,15 @@ export default function FinalCTA() {
         >
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold border border-emerald-200/80">
             <Zap className="w-3.5 h-3.5 text-emerald-600" />
-            <span>AutoValu Respon Cepat Dalam Hitungan Menit</span>
+            <span>{BUSINESS_NAME} Respon Cepat Dalam Hitungan Menit</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutral-900 leading-tight">
-            Siap Jual Mobil Anda Hari Ini di AutoValu?
+            Siap Jual Mobil Anda Hari Ini di {BUSINESS_NAME}?
           </h2>
 
           <p className="text-sm sm:text-base text-neutral-600 max-w-xl mx-auto leading-relaxed">
-            Kirimkan spesifikasi dan foto mobil Anda melalui WhatsApp. Tim AutoValu siap memberikan penawaran terbaik dan datang langsung untuk inspeksi gratis.
+            Kirimkan spesifikasi dan foto mobil Anda melalui WhatsApp atau kunjungi langsung showroom kami. Tim {BUSINESS_NAME} siap memberikan penawaran terbaik dan datang langsung untuk inspeksi gratis.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -59,8 +59,19 @@ export default function FinalCTA() {
               className="inline-flex items-center justify-center gap-2.5 bg-[#16A34A] hover:bg-[#15803D] text-white px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base shadow-sm transition-all group cursor-pointer"
             >
               <MessageCircle className="w-5 h-5" />
-              <span>Chat WhatsApp: +62 812-3420-8253</span>
+              <span>Chat WhatsApp: +62 877-5258-1074</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-800 border border-neutral-200 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base shadow-xs transition-all group cursor-pointer"
+            >
+              <MapPin className="w-4 h-4 text-emerald-600" />
+              <span>Lokasi Google Maps</span>
             </motion.a>
           </div>
 

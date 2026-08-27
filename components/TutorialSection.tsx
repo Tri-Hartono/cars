@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import { BUSINESS_NAME } from "@/lib/whatsapp";
 
 export default function TutorialSection() {
   const containerVariants: Variants = {
@@ -46,7 +47,7 @@ export default function TutorialSection() {
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
             Cara Jual Mobil Cepat &amp; Aman di{" "}
-            <span className="text-emerald-700">AutoValu.id</span>
+            <span className="text-emerald-700">{BUSINESS_NAME}</span>
           </h2>
         </motion.div>
 
@@ -95,7 +96,7 @@ export default function TutorialSection() {
             </div>
           </motion.div>
 
-          {/* Card 2 (Top Center, col-span-4): Isi Data (Green Header Tone) */}
+          {/* Card 2 (Top Center, col-span-4): Isi Data */}
           <motion.div
             variants={cardVariants}
             whileHover={{ y: -5 }}
@@ -134,7 +135,7 @@ export default function TutorialSection() {
                 Pilih Jadwal Inspeksi (Rumah/Store)
               </h3>
               <p className="text-xs text-neutral-600 leading-relaxed">
-                Tentukan jadwal dan lokasi pengecekan fisik mobil Anda. Tim kami bisa datang langsung ke rumah atau kunjungi kantor cabang terdekat. Setelah jadwal dikonfirmasi, inspektor kami siap melakukan penilaian kondisi mobil.
+                Tentukan jadwal dan lokasi pengecekan fisik mobil Anda. Tim kami bisa datang langsung ke rumah atau kunjungi kantor showroom kami. Setelah jadwal dikonfirmasi, inspektor kami siap melakukan penilaian kondisi mobil.
               </p>
             </div>
 

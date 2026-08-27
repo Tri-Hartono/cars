@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { MessageCircle, ShieldCheck, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
-import { getWhatsAppUrlForCar } from "@/lib/whatsapp";
+import { getWhatsAppUrlForCar, BUSINESS_NAME } from "@/lib/whatsapp";
 import { POPULAR_BRANDS } from "@/lib/carData";
 
 export default function CekHargaPage() {
@@ -58,10 +58,10 @@ export default function CekHargaPage() {
             className="text-center space-y-2"
           >
             <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-              Formulir Estimasi AutoValu
+              Formulir Estimasi {BUSINESS_NAME}
             </span>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900">
-              Cek Nilai Jual Mobil Anda di AutoValu
+              Cek Nilai Jual Mobil Anda di {BUSINESS_NAME}
             </h1>
             <p className="text-sm text-neutral-600 max-w-lg mx-auto">
               Lengkapi data singkat kendaraan Anda di bawah ini untuk mendapatkan estimasi harga pasar transparan dan jadwal inspeksi gratis di rumah.
@@ -240,7 +240,7 @@ export default function CekHargaPage() {
                   </label>
                   <input
                     type="tel"
-                    placeholder="0812xxxx"
+                    placeholder="0877xxxx"
                     required
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}

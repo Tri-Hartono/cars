@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, Menu, X, Phone, ArrowRight } from "lucide-react";
-import { getWhatsAppUrl, DEFAULT_PHONE } from "@/lib/whatsapp";
+import { MessageCircle, Menu, X, Phone, ArrowRight, MapPin } from "lucide-react";
+import { getWhatsAppUrl, DEFAULT_PHONE, MAPS_URL, BUSINESS_NAME } from "@/lib/whatsapp";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,10 +29,19 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2 text-neutral-300 font-medium text-[11px] sm:text-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span>AutoValu • Dana Cair 15 Menit • Inspeksi Gratis di Rumah (Jabodetabek)</span>
+            <span>{BUSINESS_NAME} • Dana Cair 15 Menit • Inspeksi Gratis di Rumah</span>
           </div>
 
           <div className="flex items-center gap-4 text-neutral-300 text-[11px] sm:text-xs">
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors"
+            >
+              <MapPin className="w-3 h-3 text-emerald-400" />
+              <span>Lokasi Showroom (Google Maps)</span>
+            </a>
             <a
               href={`https://wa.me/${DEFAULT_PHONE}`}
               target="_blank"
@@ -40,7 +49,7 @@ export default function Navbar() {
               className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors"
             >
               <Phone className="w-3 h-3 text-emerald-400" />
-              <span>+62 812-3420-8253</span>
+              <span>+62 877-5258-1074</span>
             </a>
           </div>
         </div>
@@ -55,7 +64,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Brand Logo */}
+            {/* Brand Logo & Name */}
             <Link href="/" className="flex items-center gap-3 group">
               <motion.div
                 whileHover={{ scale: 1.02 }}
@@ -64,7 +73,7 @@ export default function Navbar() {
               >
                 <Image
                   src="/image/logo.png"
-                  alt="Logo AutoValu"
+                  alt={`Logo ${BUSINESS_NAME}`}
                   fill
                   priority
                   className="object-contain object-left"
@@ -166,7 +175,16 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-              <div className="pt-2">
+              <div className="pt-2 space-y-2">
+                <a
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-neutral-100 text-neutral-800 px-4 py-2.5 rounded-xl font-bold text-xs border border-neutral-200"
+                >
+                  <MapPin className="w-4 h-4 text-emerald-600" />
+                  <span>Lihat Lokasi di Google Maps</span>
+                </a>
                 <a
                   href={waUrl}
                   target="_blank"
@@ -174,7 +192,7 @@ export default function Navbar() {
                   className="flex items-center justify-center gap-2 w-full bg-[#111111] text-white px-4 py-3 rounded-xl font-bold text-xs shadow-sm"
                 >
                   <MessageCircle className="w-4 h-4 text-emerald-400" />
-                  <span>Chat via WhatsApp (+62 812-3420-8253)</span>
+                  <span>Chat via WhatsApp (+62 877-5258-1074)</span>
                 </a>
               </div>
             </motion.div>

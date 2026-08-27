@@ -11,8 +11,9 @@ import {
   Zap,
   ArrowRight,
   Car,
+  MapPin,
 } from "lucide-react";
-import { getWhatsAppUrl, getWhatsAppUrlForCar } from "@/lib/whatsapp";
+import { getWhatsAppUrl, getWhatsAppUrlForCar, MAPS_URL, BUSINESS_NAME } from "@/lib/whatsapp";
 import { POPULAR_BRANDS } from "@/lib/carData";
 
 interface BannerSlide {
@@ -31,7 +32,7 @@ const BANNER_SLIDES: BannerSlide[] = [
     id: 1,
     tag: "PROMO TERBARU ⚡",
     tagBg: "bg-emerald-600 text-white",
-    title: "Jual Mobil Bekas Cepat di AutoValu, Dana Cair 15 Menit!",
+    title: `Jual Mobil Bekas Cepat di ${BUSINESS_NAME}, Dana Cair 15 Menit!`,
     subtitle: "Dapatkan penawaran harga pasar terbaik tanpa potongan perantara. Transaksi aman, resmi, dan langsung transfer lunas.",
     badge: "Garansi Pembayaran Instan",
     image: "/images/cars/hero-car-main.webp",
@@ -42,7 +43,7 @@ const BANNER_SLIDES: BannerSlide[] = [
     tag: "LAYANAN EKSKLUSIF 🏠",
     tagBg: "bg-neutral-900 text-white",
     title: "Gratis Home Inspection ke Rumah Anda",
-    subtitle: "Tim inspektor profesional AutoValu memeriksa 150 titik kendaraan langsung di lokasi Anda se-Jabodetabek tanpa biaya transport.",
+    subtitle: `Tim inspektor profesional ${BUSINESS_NAME} memeriksa 150 titik kendaraan langsung di lokasi Anda se-Jabodetabek tanpa biaya transport.`,
     badge: "Bebas Biaya Transportasi",
     image: "/images/cars/suv.webp",
     cta: "Jadwalkan Inspeksi Gratis",
@@ -59,13 +60,13 @@ const BANNER_SLIDES: BannerSlide[] = [
   },
   {
     id: 4,
-    tag: "PROSES TRANSPARAN 🛡️",
+    tag: "LOKASI SHOWROOM 📍",
     tagBg: "bg-neutral-800 text-white",
-    title: "Partner Terbaik untuk Jual Mobil Bekas di AutoValu",
-    subtitle: "Ratusan pemilik mobil telah terbantu dengan proses yang sat-set, jujur, dan harga penawaran yang kompetitif.",
-    badge: "Surat Jual Beli Sah di Tempat",
+    title: `Kunjungi Showroom ${BUSINESS_NAME}`,
+    subtitle: "Partner jual beli mobil terpercaya dengan showroom resmi di Jabodetabek. Cek lokasi kami di Google Maps.",
+    badge: "Lokasi Strategis & Nyaman",
     image: "/images/cars/sedan.webp",
-    cta: "Hubungi Tim Penilai",
+    cta: "Buka Google Maps",
   },
 ];
 
@@ -187,26 +188,44 @@ export default function FullWidthHero() {
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
-              <motion.a
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                href={defaultWaUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all group/btn"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>{active.cta}</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
-              </motion.a>
+              {active.id === 4 ? (
+                <motion.a
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  href={MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all group/btn"
+                >
+                  <MapPin className="w-4 h-4" />
+                  <span>Buka di Google Maps</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
+                </motion.a>
+              ) : (
+                <motion.a
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  href={defaultWaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all group/btn"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>{active.cta}</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
+                </motion.a>
+              )}
 
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                href="#tutorial"
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 bg-white/20 hover:bg-white/30 text-white backdrop-blur-md px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-all border border-white/20"
               >
-                <span>Lihat Tutorial Cara Jual</span>
+                <MapPin className="w-3.5 h-3.5" />
+                <span>Petunjuk Arah Maps</span>
               </motion.a>
             </div>
           </motion.div>
@@ -268,11 +287,11 @@ export default function FullWidthHero() {
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping" />
               <h2 className="text-xs sm:text-sm font-bold text-neutral-900 uppercase tracking-wider">
-                Cek Perkiraan Harga Mobil Instan di AutoValu
+                Cek Perkiraan Harga Mobil Instan di {BUSINESS_NAME}
               </h2>
             </div>
             <span className="text-[11px] text-neutral-500 hidden sm:inline">
-              ⚡ Hasil langsung terhubung ke tim penilai resmi via WhatsApp
+              ⚡ Hasil langsung terhubung ke WhatsApp (+62 877-5258-1074)
             </span>
           </div>
 
@@ -356,7 +375,7 @@ export default function FullWidthHero() {
               </label>
               <input
                 type="tel"
-                placeholder="0812xxxx"
+                placeholder="0877xxxx"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 className="w-full px-3 py-2 text-xs bg-neutral-50 border border-neutral-200 rounded-xl font-medium text-neutral-900 focus:outline-none focus:ring-1 focus:ring-emerald-600 focus:bg-white"

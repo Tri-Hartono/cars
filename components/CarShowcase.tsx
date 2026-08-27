@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, ShieldCheck, ArrowRight, Zap, CheckCircle2 } from "lucide-react";
-import { getWhatsAppUrl, getWhatsAppUrlForCar } from "@/lib/whatsapp";
+import { getWhatsAppUrl, getWhatsAppUrlForCar, BUSINESS_NAME } from "@/lib/whatsapp";
 
 interface CarItem {
   id: number;
@@ -125,7 +125,7 @@ export default function CarShowcase() {
               Desain Mobil &amp; Estimasi Harga
             </h2>
             <p className="text-neutral-600 text-xs sm:text-sm max-w-xl">
-              Lihat contoh tipe mobil yang kami beli beserta perkiraan rentang harganya di AutoValu.
+              Lihat contoh tipe mobil yang kami beli beserta perkiraan rentang harganya di {BUSINESS_NAME}.
             </p>
           </div>
 
@@ -240,7 +240,7 @@ export default function CarShowcase() {
             href="/mobil-yang-kami-beli"
             className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800"
           >
-            <span>Lihat semua daftar merek &amp; model mobil lengkap di AutoValu</span>
+            <span>Lihat semua daftar merek &amp; model mobil lengkap di {BUSINESS_NAME}</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
