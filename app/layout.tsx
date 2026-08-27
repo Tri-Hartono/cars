@@ -29,6 +29,13 @@ export const metadata: Metadata = {
     "jual mobil tanpa ribet",
   ],
   authors: [{ name: "Naufal Gallery Motor" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+  },
   openGraph: {
     title: "Naufal Gallery Motor | Jual Mobil Bekas Cepat & Terpercaya",
     description:
