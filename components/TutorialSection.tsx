@@ -75,12 +75,13 @@ export default function TutorialSection() {
               </p>
             </div>
 
-            {/* Car visual at bottom */}
-            <div className="relative h-36 w-full my-4">
+            {/* Car visual at bottom - Affordable Family Car Toyota Avanza */}
+            <div className="relative h-40 w-full my-3">
               <Image
-                src="/images/tutorial/cek-harga.webp"
-                alt="Cek Perkiraan Harga Mobil"
+                src="/images/tutorial/cek-harga-avanza.webp"
+                alt="Cek Perkiraan Harga Mobil Toyota Avanza"
                 fill
+                unoptimized
                 className="object-contain object-center"
                 sizes="(max-width: 768px) 100vw, 400px"
               />
