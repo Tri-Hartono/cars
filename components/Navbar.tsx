@@ -63,21 +63,22 @@ export default function Navbar() {
         className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-neutral-200"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 sm:h-22">
+          <div className="flex items-center justify-between h-20 sm:h-24">
             {/* Brand Logo & Name */}
             <Link href="/" className="flex items-center gap-3 group py-2">
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="relative h-12 w-44 sm:h-14 sm:w-56"
+                className="relative h-14 w-48 sm:h-16 sm:w-60"
               >
                 <Image
-                  src="/image/logo.png"
+                  src="/image/naufal-logo.png"
                   alt={`Logo ${BUSINESS_NAME}`}
                   fill
                   priority
+                  unoptimized
                   className="object-contain object-left"
-                  sizes="(max-width: 768px) 180px, 240px"
+                  sizes="(max-width: 768px) 200px, 260px"
                 />
               </motion.div>
             </Link>
@@ -117,7 +118,7 @@ export default function Navbar() {
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#111111] hover:bg-neutral-800 text-white px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all group shadow-sm"
+                className="inline-flex items-center gap-2 bg-[#111111] hover:bg-neutral-800 text-white px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all group shadow-sm cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4 text-emerald-400" />
                 <span>Konsultasi WA</span>
@@ -139,7 +140,7 @@ export default function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="p-2 rounded-xl text-neutral-700 hover:bg-neutral-100 focus:outline-none"
+                className="p-2 rounded-xl text-neutral-700 hover:bg-neutral-100 focus:outline-none cursor-pointer"
                 aria-label="Toggle menu"
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

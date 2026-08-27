@@ -28,13 +28,14 @@ export default function Footer() {
           
           {/* Col 1: Brand & Logo */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="relative h-14 w-48">
+            <div className="relative h-14 w-48 sm:h-16 sm:w-56">
               <Image
-                src="/image/logo.png"
+                src="/image/naufal-logo.png"
                 alt={`Logo ${BUSINESS_NAME}`}
                 fill
+                unoptimized
                 className="object-contain object-left"
-                sizes="200px"
+                sizes="240px"
               />
             </div>
             <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed max-w-sm">
