@@ -33,9 +33,9 @@ const BANNER_SLIDES: BannerSlide[] = [
     tag: "PROMO TERBARU ⚡",
     tagBg: "bg-emerald-600 text-white",
     title: `Jual Mobil Bekas Cepat di ${BUSINESS_NAME}, Dana Cair 15 Menit!`,
-    subtitle: "Dapatkan penawaran harga pasar terbaik untuk mobil keluarga, MPV, dan City Car tanpa potongan calo.",
+    subtitle: "Dapatkan penawaran harga pasar terbaik untuk mobil keluarga Avanza, Brio, Calya, Sigra, Xenia tanpa calo.",
     badge: "Garansi Pembayaran Instan",
-    image: "/images/cars/hero-car-main.webp",
+    image: "/images/cars/avanza-silver.webp",
     cta: "Klaim Penawaran via WA",
   },
   {
@@ -45,7 +45,7 @@ const BANNER_SLIDES: BannerSlide[] = [
     title: "Gratis Home Inspection ke Rumah Anda",
     subtitle: `Tim inspektor ${BUSINESS_NAME} memeriksa 150 titik kendaraan langsung di rumah Anda se-Jabodetabek tanpa biaya transport.`,
     badge: "Bebas Biaya Transportasi",
-    image: "/images/cars/mpv.webp",
+    image: "/images/cars/calya-white.webp",
     cta: "Jadwalkan Inspeksi Gratis",
   },
   {
@@ -53,9 +53,9 @@ const BANNER_SLIDES: BannerSlide[] = [
     tag: "SEMUA MEREK & LCGC 🚗",
     tagBg: "bg-emerald-700 text-white",
     title: "Terima Avanza, Brio, Calya, Sigra & Over Kredit",
-    subtitle: "Melayani segala tipe mobil keluarga, hatchback, LCGC, hingga mobil yang masih dalam masa cicilan leasing.",
+    subtitle: "Melayani segala tipe mobil keluarga harian, hatchback, LCGC, hingga mobil yang masih dalam masa cicilan leasing.",
     badge: "Bantuan Berkas Sah & Tuntas",
-    image: "/images/cars/citycar.webp",
+    image: "/images/cars/brio-yellow.webp",
     cta: "Konsultasi Mobil Saya",
   },
   {
@@ -65,7 +65,7 @@ const BANNER_SLIDES: BannerSlide[] = [
     title: `Kunjungi Showroom ${BUSINESS_NAME}`,
     subtitle: "Partner jual beli mobil keluarga terpercaya dengan showroom resmi di Jabodetabek. Cek lokasi di Google Maps.",
     badge: "Lokasi Strategis & Nyaman",
-    image: "/images/cars/suv.webp",
+    image: "/images/cars/terios-grey.webp",
     cta: "Buka Google Maps",
   },
 ];
@@ -142,7 +142,8 @@ export default function FullWidthHero() {
               alt={active.title}
               fill
               priority
-              className="object-cover object-center opacity-60"
+              unoptimized
+              className="object-cover object-center opacity-65"
               sizes="100vw"
             />
           </motion.div>

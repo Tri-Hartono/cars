@@ -26,9 +26,9 @@ const CARS_DATA: CarItem[] = [
     brand: "Toyota",
     model: "Avanza 1.3 / 1.5 G / Veloz",
     category: "MPV",
-    yearRange: "2015 - 2023",
+    yearRange: "2016 - 2024",
     priceRange: "Rp 115jt - 215jt",
-    image: "/images/cars/hero-car-main.webp",
+    image: "/images/cars/avanza-silver.webp",
     badge: "Paling Dicari",
     transmission: "Manual & Matic",
     popularity: "Mobil Sejuta Umat",
@@ -38,60 +38,60 @@ const CARS_DATA: CarItem[] = [
     brand: "Honda",
     model: "Brio Satya E / RS",
     category: "City Car",
-    yearRange: "2016 - 2023",
+    yearRange: "2016 - 2024",
     priceRange: "Rp 98jt - 168jt",
-    image: "/images/cars/citycar.webp",
+    image: "/images/cars/brio-yellow.webp",
     badge: "Cair Cepat",
     transmission: "CVT / Manual",
     popularity: "City Car Terlaris",
   },
   {
     id: 3,
-    brand: "Daihatsu",
-    model: "Sigra 1.0 / 1.2 R Deluxe",
-    category: "LCGC",
-    yearRange: "2017 - 2023",
-    priceRange: "Rp 78jt - 128jt",
-    image: "/images/cars/mpv.webp",
-    badge: "Harga Terbaik",
-    transmission: "Manual & Matic",
-    popularity: "7-Seater Ekonomis",
-  },
-  {
-    id: 4,
     brand: "Toyota",
     model: "Calya 1.2 G / E",
     category: "LCGC",
-    yearRange: "2017 - 2023",
+    yearRange: "2017 - 2024",
     priceRange: "Rp 85jt - 135jt",
-    image: "/images/cars/sedan.webp",
+    image: "/images/cars/calya-white.webp",
     badge: "Permintaan Tinggi",
     transmission: "Manual & Matic",
     popularity: "Keluarga Irit",
   },
   {
-    id: 5,
+    id: 4,
     brand: "Daihatsu",
     model: "Xenia 1.3 X / R",
     category: "MPV",
-    yearRange: "2015 - 2023",
+    yearRange: "2016 - 2024",
     priceRange: "Rp 100jt - 185jt",
-    image: "/images/cars/mpv.webp",
+    image: "/images/cars/xenia-silver.webp",
     badge: "Favorit Keluarga",
     transmission: "Manual & Matic",
     popularity: "MPV Tangguh",
   },
   {
-    id: 6,
+    id: 5,
     brand: "Daihatsu",
     model: "Terios / Toyota Rush",
     category: "SUV",
-    yearRange: "2016 - 2023",
+    yearRange: "2016 - 2024",
     priceRange: "Rp 135jt - 215jt",
-    image: "/images/cars/suv.webp",
+    image: "/images/cars/terios-grey.webp",
     badge: "SUV Ekonomis",
     transmission: "Manual & Matic",
     popularity: "Ground Clearance Tinggi",
+  },
+  {
+    id: 6,
+    brand: "Daihatsu",
+    model: "Sigra 1.0 / 1.2 R Deluxe",
+    category: "LCGC",
+    yearRange: "2017 - 2024",
+    priceRange: "Rp 78jt - 128jt",
+    image: "/images/cars/calya-white.webp",
+    badge: "Harga Terbaik",
+    transmission: "Manual & Matic",
+    popularity: "7-Seater Ekonomis",
   },
 ];
 
@@ -182,11 +182,12 @@ export default function CarShowcase() {
                   className="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-xs hover:shadow-md hover:border-neutral-300 transition-all flex flex-col justify-between group"
                 >
                   {/* Image & Badge */}
-                  <div className="relative h-44 sm:h-48 w-full bg-neutral-100 overflow-hidden">
+                  <div className="relative h-44 sm:h-52 w-full bg-neutral-100 overflow-hidden">
                     <Image
                       src={car.image}
                       alt={car.model}
                       fill
+                      unoptimized
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 400px"
                     />

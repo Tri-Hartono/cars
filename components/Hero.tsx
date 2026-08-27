@@ -18,22 +18,22 @@ import { POPULAR_BRANDS } from "@/lib/carData";
 
 const FEATURED_CARS = [
   {
-    name: "MPV Keluarga (Avanza / Sigra)",
-    image: "/images/cars/hero-car-main.webp",
+    name: "MPV Keluarga (Toyota Avanza)",
+    image: "/images/cars/avanza-silver.webp",
     models: "Avanza, Xenia, Sigra, Calya, Ertiga",
-    price: "Rp 75jt - 210jt",
+    price: "Rp 75jt - 215jt",
   },
   {
-    name: "City Car & LCGC (Brio / Ayla)",
-    image: "/images/cars/citycar.webp",
+    name: "City Car & LCGC (Honda Brio)",
+    image: "/images/cars/brio-yellow.webp",
     models: "Brio, Agya, Ayla, Sirion, Ignis",
-    price: "Rp 70jt - 165jt",
+    price: "Rp 70jt - 168jt",
   },
   {
-    name: "Mini SUV (Rush / Terios)",
-    image: "/images/cars/suv.webp",
-    models: "Rush, Terios, Raize, Rocky, BR-V",
-    price: "Rp 120jt - 225jt",
+    name: "Mini SUV (Daihatsu Terios)",
+    image: "/images/cars/terios-grey.webp",
+    models: "Terios, Rush, Raize, Rocky, BR-V",
+    price: "Rp 120jt - 215jt",
   },
 ];
 
@@ -271,11 +271,12 @@ export default function Hero() {
                 key={i}
                 className="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:border-neutral-400 transition-all flex flex-col"
               >
-                <div className="relative h-36 sm:h-40 w-full">
+                <div className="relative h-40 sm:h-44 w-full">
                   <Image
                     src={car.image}
                     alt={car.name}
                     fill
+                    unoptimized
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 400px"
                   />
